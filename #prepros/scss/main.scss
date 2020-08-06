@@ -572,7 +572,8 @@ li.slick-active {
     }
 }
 
-.add-article-img-btn {
+.add-article-img-btn,
+.add-article-img-wrap-btn {
     width: 32px;
     height: 32px;
     border: 1px solid #dedede;
@@ -596,7 +597,8 @@ li.slick-active {
     }
 }
 
-.add-article-img-btn-active {
+.add-article-img-btn-active,
+.add-article-img-wrap-btn-active {
     flex-direction: column;
 }
 

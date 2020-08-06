@@ -191,4 +191,41 @@ $(document).ready(function() {
     $('.store-sort-select').select2({
         minimumResultsForSearch: Infinity
     });
+    $('.store-sort-select-mobile').select2({
+        placeholder: "Сортувати",
+        allowClear: true,
+        minimumResultsForSearch: Infinity
+    });
+    $('body').on('click', '.mobile-sort', function() {
+        $(this).addClass('mobile-sort-active');
+        $('.mobile-sort-list').removeClass('mobile-sort-list-active');
+        $('.article-card').removeClass('article-card-flex');
+        $('.main-cards-item').removeClass('col-sm-12');
+        $('.main-cards-item').addClass('col-sm-6');
+    });
+    $('body').on('click', '.mobile-sort-list', function() {
+        $(this).addClass('mobile-sort-list-active');
+        $('.mobile-sort').removeClass('mobile-sort-active');
+        $('.article-card').addClass('article-card-flex');
+        $('.main-cards-item').removeClass('col-sm-6');
+        $('.main-cards-item').addClass('col-sm-12');
+    });
+    $('body').on('click', '.add-article-img-wrap-btn', function() {
+        $(this).toggleClass('add-article-img-wrap-btn-active');
+        $(this).parents('.article-card-flex').find('.article-img-btn-wrap').toggleClass('article-img-btn-wrap-active');
+    });
+    $(function() {
+        $nav = $('.store-top-filter');
+        $nav.css('width', $nav.outerWidth());
+        $window = $(window);
+        $h = $nav.offset().top;
+        $window.scroll(function() {
+            if ($window.scrollTop() > $h) {
+                $nav.addClass('fixed');
+            } else {
+                $nav.removeClass('fixed');
+            }
+        });
+    });
+
 });

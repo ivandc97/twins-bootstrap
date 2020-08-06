@@ -821,11 +821,11 @@
                         <a href="">32</a>
                         <a href="">48</a>
                     </div>
-                    <button class="store-top-filter">
+                    <button class="store-top-filter fixed">
                         Фільтр товарів
                         <span class="counter">0</span>
                     </button>
-                    <div class="store-sort">
+                    <div class="store-sort store-sort-desktop">
                         <p>Сортувати за:</p>
                         <form>
                             <select name="orderby" class="store-sort-select" aria-label="Замовлення магазину">
@@ -835,6 +835,45 @@
                                 <option value="price-desc">за ціною: від високої до низької</option>
                             </select> <input type="hidden" name="paged" value="1"> <input type="hidden" name="posts_per_page" value="16"></form>
                     </div>
+                    <div class="store-sort store-sort-mobile">
+                        <form>
+                            <select class="store-sort-select-mobile">
+                                <option></option>
+                                <option value="popularity">за популярністю</option>
+                                <option value="rating">за середньою оцінкою</option>
+                                <option value="price">за ціною: від низької до високої</option>
+                                <option value="price-desc">за ціною: від високої до низької</option>
+                            </select>
+                            <input type="hidden" name="paged" value="1">
+                            <input type="hidden" name="posts_per_page" value="16">
+                        </form>
+                    </div>
+                    <div class="store-mobile-btns">
+                        <button class="mobile-sort mobile-sort-active">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.90594 0H2.31281C1.03754 0 0 1.03754 0 2.31281V6.90594C0 8.18121 1.03754 9.21875 2.31281 9.21875H6.90594C8.18121 9.21875 9.21875 8.18121 9.21875 6.90594V2.31281C9.21875 1.03754 8.18121 0 6.90594 0ZM7.65625 6.90594C7.65625 7.31965 7.31965 7.65625 6.90594 7.65625H2.31281C1.8991 7.65625 1.5625 7.31965 1.5625 6.90594V2.31281C1.5625 1.8991 1.8991 1.5625 2.31281 1.5625H6.90594C7.31965 1.5625 7.65625 1.8991 7.65625 2.31281V6.90594Z"/>
+                                <path d="M17.6562 0H13.125C11.8327 0 10.7812 1.05141 10.7812 2.34375V6.875C10.7812 8.16734 11.8327 9.21875 13.125 9.21875H17.6562C18.9486 9.21875 20 8.16734 20 6.875V2.34375C20 1.05141 18.9486 0 17.6562 0ZM18.4375 6.875C18.4375 7.30578 18.087 7.65625 17.6562 7.65625H13.125C12.6942 7.65625 12.3438 7.30578 12.3438 6.875V2.34375C12.3438 1.91297 12.6942 1.5625 13.125 1.5625H17.6562C18.087 1.5625 18.4375 1.91297 18.4375 2.34375V6.875Z"/>
+                                <path d="M6.90594 10.7812H2.31281C1.03754 10.7812 0 11.8188 0 13.0941V17.6872C0 18.9625 1.03754 20 2.31281 20H6.90594C8.18121 20 9.21875 18.9625 9.21875 17.6872V13.0941C9.21875 11.8188 8.18121 10.7812 6.90594 10.7812ZM7.65625 17.6872C7.65625 18.1009 7.31965 18.4375 6.90594 18.4375H2.31281C1.8991 18.4375 1.5625 18.1009 1.5625 17.6872V13.0941C1.5625 12.6804 1.8991 12.3438 2.31281 12.3438H6.90594C7.31965 12.3438 7.65625 12.6804 7.65625 13.0941V17.6872Z"/>
+                                <path d="M17.6562 10.7812H13.125C11.8327 10.7812 10.7812 11.8327 10.7812 13.125V17.6562C10.7812 18.9486 11.8327 20 13.125 20H17.6562C18.9486 20 20 18.9486 20 17.6562V13.125C20 11.8327 18.9486 10.7812 17.6562 10.7812ZM18.4375 17.6562C18.4375 18.087 18.087 18.4375 17.6562 18.4375H13.125C12.6942 18.4375 12.3438 18.087 12.3438 17.6562V13.125C12.3438 12.6942 12.6942 12.3438 13.125 12.3438H17.6562C18.087 12.3438 18.4375 12.6942 18.4375 13.125V17.6562Z"/>
+                                </svg>                            
+                        </button>
+                        <button class="mobile-sort-list">
+                            <svg viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.8134 8.94971H7.71329C7.40906 8.94971 7.16016 9.19862 7.16016 9.50284C7.16016 9.80706 7.40906 10.056 7.71329 10.056H17.8134C18.1177 10.056 18.3666 9.80706 18.3666 9.50284C18.3666 9.19862 18.1232 8.94971 17.8134 8.94971Z"/>
+                                <path d="M3.20535 6.93066C1.78381 6.93066 0.633301 8.08117 0.633301 9.50272C0.633301 10.9243 1.78381 12.0748 3.20535 12.0748C4.6269 12.0748 5.7774 10.9243 5.7774 9.50272C5.7774 8.08117 4.6269 6.93066 3.20535 6.93066ZM3.20535 10.9685C2.39225 10.9685 1.73956 10.3103 1.73956 9.50272C1.73956 8.68962 2.39778 8.03692 3.20535 8.03692C4.01292 8.03692 4.67115 8.69515 4.67115 9.50272C4.67115 10.3103 4.01292 10.9685 3.20535 10.9685Z"/>
+                                <path d="M17.8134 2.03564H7.71329C7.40906 2.03564 7.16016 2.28455 7.16016 2.58877C7.16016 2.893 7.40906 3.1419 7.71329 3.1419H17.8134C18.1177 3.1419 18.3666 2.893 18.3666 2.58877C18.3666 2.28455 18.1232 2.03564 17.8134 2.03564Z"/>
+                                <path d="M3.20535 0C1.78381 0 0.633301 1.15051 0.633301 2.57205C0.633301 3.9936 1.78381 5.1441 3.20535 5.1441C4.6269 5.1441 5.7774 3.9936 5.7774 2.57205C5.7774 1.15604 4.6269 0.0055313 3.20535 0ZM3.20535 4.04338C2.39225 4.04338 1.73956 3.38515 1.73956 2.57758C1.73956 1.77001 2.39778 1.11179 3.20535 1.11179C4.01845 1.11179 4.67115 1.77001 4.67115 2.57758C4.67115 3.38515 4.01292 4.04338 3.20535 4.04338Z"/>
+                                <path d="M17.8134 15.8638H7.71329C7.40906 15.8638 7.16016 16.1127 7.16016 16.4169C7.16016 16.7211 7.40906 16.97 7.71329 16.97H17.8134C18.1177 16.97 18.3666 16.7211 18.3666 16.4169C18.3666 16.1127 18.1232 15.8638 17.8134 15.8638Z"/>
+                                <path d="M3.20535 13.8557C1.78381 13.8557 0.633301 15.0062 0.633301 16.4278C0.633301 17.8493 1.78381 18.9998 3.20535 18.9998C4.6269 18.9998 5.7774 17.8493 5.7774 16.4278C5.7774 15.0118 4.6269 13.8557 3.20535 13.8557ZM3.20535 17.8991C2.39225 17.8991 1.73956 17.2409 1.73956 16.4333C1.73956 15.6202 2.39778 14.9675 3.20535 14.9675C4.01845 14.9675 4.67115 15.6257 4.67115 16.4333C4.67115 17.2409 4.01292 17.8991 3.20535 17.8991Z"/>
+                                </svg>
+                        </button>
+                        <div class="panel-button panel-filter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line>
+                            </svg>
+                            <span class="counter">0</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="row">
@@ -852,12 +891,9 @@
 
     <section class="main-cards-wrap">
         <div class="container">
-            <div class="row main-cards-slider">
-                <div class="col-xl-3 col-md-4 col-6 main-cards-item">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 main-cards-item">
                     <div class="article-card">
-                        <div class="article-card-new">
-                            <span>New</span>
-                        </div>
                         <div class="article-img">
                             <a href="">
                                 <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-1"
@@ -867,185 +903,209 @@
                                 <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-4">
                             </a>
                         </div>
-                        <div class="article-img-btn-wrap">
-                            <button class="article-img-btn" data-var="1">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
-                                <span class="checks active-color"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="2">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="3">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="4">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                        </div>
-                        <div class="article-title">
-                            <a href="#">
-                                Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
-                            </a>
-                        </div>
-                        <div class="article-rating-wrap">
-                            <a href="#">
-                                <div class="rating-hearts">
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                        <div class="article-card-right">
+                            <div class="article-img-btn-wrap">
+                                <button class="article-img-btn" data-var="1">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
+                                    <span class="checks active-color"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="2">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="3">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="4">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                            </div>
+                            <div class="article-title">
+                                <a href="#">
+                                    Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
+                                </a>
+                            </div>
+                            <div class="article-rating-wrap">
+                                <a href="#">
+                                    <div class="rating-hearts">
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
-                                </div>
-                                <div class="rating-count no-reviews">Відгуків немає</div>
-                            </a>
-                        </div>
-                        <div class="article-price-wrap">
-                            <span class="card-price">
-                                <span>420
-                                <span>грн.</span>
-                            </span>
-                            </span>
-                            <a class="card-buy" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                                <span>Купити</span>
-                            </a>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                    </div>
+                                    <div class="rating-count no-reviews">Відгуків немає</div>
+                                </a>
+                            </div>
+                            <div class="article-price-wrap">
+                                <span class="card-price">
+                                    <span>420
+                                    <span>грн.</span>
+                                </span>
+                                </span>
+                                <button class="add-article-img-wrap-btn">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                                <a class="card-buy" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    <span>Купити</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-4 col-6 main-cards-item">
+
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 main-cards-item">
                     <div class="article-card">
                         <div class="article-img">
                             <a href="">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-5"
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-1"
                                     style="display: inline;">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-6">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-7">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-8">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-2">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-3">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-4">
                             </a>
                         </div>
-                        <div class="article-img-btn-wrap">
-                            <button class="article-img-btn" data-var="5">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
-                                <span class="checks active-color"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="6">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="7">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="8">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                        </div>
-                        <div class="article-title">
-                            <a href="#">
-                                Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
-                            </a>
-                        </div>
-                        <div class="article-rating-wrap">
-                            <a href="#">
-                                <div class="rating-hearts">
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                        <div class="article-card-right">
+                            <div class="article-img-btn-wrap">
+                                <button class="article-img-btn" data-var="1">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
+                                    <span class="checks active-color"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="2">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="3">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="4">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                            </div>
+                            <div class="article-title">
+                                <a href="#">
+                                    Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
+                                </a>
+                            </div>
+                            <div class="article-rating-wrap">
+                                <a href="#">
+                                    <div class="rating-hearts">
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
-                                </div>
-                                <div class="rating-count no-reviews">Відгуків немає</div>
-                            </a>
-                        </div>
-                        <div class="article-price-wrap">
-                            <span class="card-price">
-                                <span>420
-                                <span>грн.</span>
-                            </span>
-                            </span>
-                            <a class="card-buy" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                                <span>Купити</span>
-                            </a>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                    </div>
+                                    <div class="rating-count no-reviews">Відгуків немає</div>
+                                </a>
+                            </div>
+                            <div class="article-price-wrap">
+                                <span class="card-price">
+                                    <span>420
+                                    <span>грн.</span>
+                                </span>
+                                </span>
+                                <button class="add-article-img-wrap-btn">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                                <a class="card-buy" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    <span>Купити</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-4 col-6 main-cards-item">
+
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 main-cards-item">
                     <div class="article-card">
                         <div class="article-img">
                             <a href="">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-9"
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-1"
                                     style="display: inline;">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-10">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-11">
-                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-12">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-2">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-3">
+                                <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-4">
                             </a>
                         </div>
-                        <div class="article-img-btn-wrap">
-                            <button class="article-img-btn" data-var="9">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
-                                <span class="checks active-color"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="10">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="11">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="12">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                        </div>
-                        <div class="article-title">
-                            <a href="#">
-                                Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
-                            </a>
-                        </div>
-                        <div class="article-rating-wrap">
-                            <a href="#">
-                                <div class="rating-hearts">
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                        <div class="article-card-right">
+                            <div class="article-img-btn-wrap">
+                                <button class="article-img-btn" data-var="1">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
+                                    <span class="checks active-color"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="2">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="3">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="4">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                            </div>
+                            <div class="article-title">
+                                <a href="#">
+                                    Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
+                                </a>
+                            </div>
+                            <div class="article-rating-wrap">
+                                <a href="#">
+                                    <div class="rating-hearts">
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
-                                </div>
-                                <div class="rating-count no-reviews">Відгуків немає</div>
-                            </a>
-                        </div>
-                        <div class="article-price-wrap">
-                            <span class="card-price">
-                                <span>420
-                                <span>грн.</span>
-                            </span>
-                            </span>
-                            <a class="card-buy" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                                <span>Купити</span>
-                            </a>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                    </div>
+                                    <div class="rating-count no-reviews">Відгуків немає</div>
+                                </a>
+                            </div>
+                            <div class="article-price-wrap">
+                                <span class="card-price">
+                                    <span>420
+                                    <span>грн.</span>
+                                </span>
+                                </span>
+                                <button class="add-article-img-wrap-btn">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                                <a class="card-buy" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    <span>Купити</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-4 col-6 main-cards-item">
+
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 main-cards-item">
                     <div class="article-card">
                         <div class="article-img">
                             <a href="">
@@ -1059,75 +1119,83 @@
                                 <img src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-350x350.jpg" alt="Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)" class="card-img variation-15">
                             </a>
                         </div>
-                        <div class="article-img-btn-wrap">
-                            <button class="article-img-btn" data-var="9">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
-                                <span class="checks active-color"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="10">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="11">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn" data-var="12">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="add-article-img-btn">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </button>
-                            <button class="article-img-btn article-img-btn-additional" data-var="13">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn article-img-btn-additional" data-var="14">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                            <button class="article-img-btn article-img-btn-additional" data-var="15">
-                                <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
-                                <span class="checks"></span>
-                            </button>
-                        </div>
-                        <div class="article-title">
-                            <a href="#">
-                                Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
-                            </a>
-                        </div>
-                        <div class="article-rating-wrap">
-                            <a href="#">
-                                <div class="rating-hearts">
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                        <div class="article-card-right">
+                            <div class="article-img-btn-wrap">
+                                <button class="article-img-btn" data-var="9">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-butterfly-blue-1-150x150.jpg" alt="">
+                                    <span class="checks active-color"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="10">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-blue-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="11">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-yellow-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn" data-var="12">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="add-article-img-btn">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                                <button class="article-img-btn article-img-btn-additional" data-var="13">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn article-img-btn-additional" data-var="14">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                                <button class="article-img-btn article-img-btn-additional" data-var="15">
+                                    <img class="img-fluid" src="https://twins.ua/wp-content/uploads/2020/04/nabir-v-kolyasku-twins-muslinovyj-pled-podushka-namatracznyk-na-rez-umbrella-pink-150x150.jpg" alt="">
+                                    <span class="checks"></span>
+                                </button>
+                            </div>
+                            <div class="article-title">
+                                <a href="#">
+                                    Набір в коляску Twins мусліновий (плед, подушка, наматрацник на рез)
+                                </a>
+                            </div>
+                            <div class="article-rating-wrap">
+                                <a href="#">
+                                    <div class="rating-hearts">
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
 
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
-                                </div>
-                                <div class="rating-count no-reviews">Відгуків немає</div>
-                            </a>
-                        </div>
-                        <div class="article-price-wrap">
-                            <span class="card-price">
-                                <span>420
-                                <span>грн.</span>
-                            </span>
-                            </span>
-                            <a class="card-buy" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                                <span>Купити</span>
-                            </a>
+                                        <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><mask id="mask"> <path fill="white" d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z"></path></mask></defs><path d="M11.544 5.2443C9.82088 4.96984 9.20635 4.35854 8.37494 2.76169C8.01345 2.07554 7.57967 1.4393 7.04949 0.890379C6.72416 0.566018 6.36268 0.266611 5.92889 0.116906C4.76009 -0.269832 3.07316 0.353939 2.2297 1.23969C0.759658 2.79912 -0.0235591 5.44391 0.000539931 7.58968C0.0246389 9.64812 0.337921 11.6941 0.892198 13.6652C1.02474 14.1143 1.16934 14.5884 1.49467 14.9127C1.9646 15.3868 2.66348 15.4617 3.31415 15.5116C6.96515 15.7361 10.821 15.4118 13.8454 13.1288C14.6768 12.505 15.3396 11.6567 15.689 10.6586C16.8819 7.27779 14.4599 5.70589 11.544 5.2443Z" fill="#C4C4C4"></path><rect x="-100%" y="0" fill="#F27C9C" width="100%" height="100%" mask="url(#mask)"></rect></svg>
+                                    </div>
+                                    <div class="rating-count no-reviews">Відгуків немає</div>
+                                </a>
+                            </div>
+                            <div class="article-price-wrap">
+                                <span class="card-price">
+                                    <span>420
+                                    <span>грн.</span>
+                                </span>
+                                </span>
+                                <button class="add-article-img-wrap-btn">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                                <a class="card-buy" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    <span>Купити</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1153,10 +1221,10 @@
                 <div class="col-12">
                     <div class="pagination-list">
                         <span aria-current="page" class="page-numbers current">1</span>
-                        <a class="page-numbers" href="/ua/shop/2/?orderby=popularity">2</a>
-                        <a class="page-numbers" href="/ua/shop/3/?orderby=popularity">3</a>
+                        <a class="page-numbers" href="">2</a>
+                        <a class="page-numbers" href="">3</a>
                         <span class="page-numbers dots">…</span>
-                        <a class="page-numbers" href="/ua/shop/52/?orderby=popularity">52</a>
+                        <a class="page-numbers" href="">52</a>
                     </div>
                 </div>
             </div>
