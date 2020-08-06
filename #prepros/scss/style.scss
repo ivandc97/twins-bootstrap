@@ -1,0 +1,82 @@
+body {
+    font-family: 'Blogger Sans';
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-button {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #dedede;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #f27c9c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #da5679;
+}
+
+::-webkit-resizer {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+ul,
+li,
+ol {
+    margin: 0;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1360px;
+}
+
+@media (min-width: 1200px) {
+    .container .container-lg,
+    .container-xl {
+        max-width: 1360px;
+    }
+}
+
+@import 'header.scss';
+@import 'main.scss';
+@import 'login.scss';
+@import 'store.scss';
+@import 'footer.scss'

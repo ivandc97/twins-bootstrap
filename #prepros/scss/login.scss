@@ -1,0 +1,218 @@
+.login-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+}
+
+.login-content {
+    text-align: center;
+}
+
+.login-title {
+    margin-bottom: 24px;
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    h3 {
+        margin: 24px 0;
+        font-weight: 500;
+        line-height: 16px;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        color: #7A7B7A;
+    }
+}
+
+.input-wrap {
+    width: 100%;
+    max-width: 348px;
+    margin: 8px auto;
+    input {
+        width: 100%;
+        padding-left: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #212322;
+        border: solid 2px #EAEAEA;
+        height: 36px;
+        background: #EAEAEA;
+        border-radius: 18px;
+    }
+}
+
+.forget-pass-wrap {
+    width: 100%;
+    max-width: 348px;
+    margin: 8px auto;
+    text-align: end;
+    a {
+        font-weight: 300;
+        line-height: normal;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        color: #7A7B7A;
+    }
+}
+
+.submit-wrap {
+    width: 100%;
+    max-width: 348px;
+    margin: 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+        min-width: 156px;
+        height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 39px;
+        letter-spacing: 0.75px;
+        max-width: 224px;
+        padding: 0 16px;
+        border: 2px solid #EF4D84;
+        outline: none;
+        vertical-align: middle;
+        color: #FFFFFF;
+        background-color: #EF4D84;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 25px;
+    }
+}
+
+.chekout-input {
+    display: flex;
+    align-items: center;
+}
+
+.chekout-input input[type=checkbox] {
+    display: none;
+}
+
+.chekout-input label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 24px;
+    margin-right: 0;
+    user-select: none;
+    font-weight: 300;
+    line-height: 16px;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    color: #A6A7A7;
+    margin-bottom: 0;
+}
+
+.chekout-input label:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #DEDEDE;
+}
+
+
+/* Checked */
+
+.chekout-input input[type=checkbox]:checked+label:before {
+    content: '\2713';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -1px;
+    left: 2px;
+    color: #FFFFFF;
+    background-color: #EF4D84;
+}
+
+.input-social-title {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #212322;
+}
+
+.input-social {
+    width: 100%;
+    max-width: 348px;
+    margin: 8px auto;
+    a {
+        margin: 0 18px;
+    }
+    img {
+        width: 50px;
+    }
+}
+
+.input-policy {
+    width: 100%;
+    max-width: 348px;
+    margin: 8px auto;
+    a {
+        color: #7A7B7A;
+        border-bottom: solid 1px #7A7B7A;
+    }
+    p {
+        font-weight: 300;
+        line-height: normal;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.4px;
+        color: #7A7B7A;
+        margin: 16px 0 32px 0;
+    }
+}
+
+.to-registration {
+    p {
+        font-weight: normal;
+        line-height: 16px;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #212322;
+    }
+    a {
+        font-weight: 500;
+        color: #212322;
+    }
+}
+
+.sgr-recaptcha {
+    width: 100%;
+    max-width: 348px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-reg {
+    button {
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+@media(max-width: 326px) {
+    .chekout-input label {
+        padding-left: 33px;
+    }
+}

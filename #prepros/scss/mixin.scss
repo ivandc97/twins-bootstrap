@@ -1,0 +1,105 @@
+@mixin header-1 {
+    font-family: 'Blogger Sans';
+    font-weight: bold;
+    font-size: 96px;
+    letter-spacing: -1.5px;
+}
+
+@mixin header-2 {
+    font-family: 'Blogger Sans';
+    font-weight: bold;
+    font-size: 64px;
+    letter-spacing: -0.5px;
+}
+
+@mixin header-3 {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 0;
+}
+
+@mixin header-4 {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0.25px;
+}
+
+@mixin header-5 {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+@mixin header-6 {
+    font-family: 'Blogger Sans';
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+}
+
+@mixin subtitle-1 {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+
+@mixin subtitle-2 {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+}
+
+@mixin body-1 {
+    font-family: 'Blogger Sans';
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+@mixin body-2 {
+    font-family: 'Blogger Sans';
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+}
+
+@mixin body-3 {
+    font-family: 'Blogger Sans';
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    line-height: 130%;
+}
+
+@mixin button {
+    font-family: 'Blogger Sans';
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.75px;
+    line-height: 16px;
+}
+
+@mixin caption {
+    font-family: 'Blogger Sans';
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    line-height: auto;
+}
+
+@mixin overline {
+    font-family: 'Blogger Sans';
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 16px;
+}
